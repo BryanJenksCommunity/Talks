@@ -1,0 +1,144 @@
+---
+name: Bryan
+surname: Jenks
+position: "Information Technology Associate"
+address: "Covered California"
+profilepic: "./img/me.jpg"
+www: "bryanjenks.dev"
+email: "bryan@bryanjenks.dev"
+github: tallguyjenks
+linkedin: bryanjenks
+orcid: 0000-0002-9604-3069
+date: "`r format(Sys.time(), '%B %Y')`"
+headcolor: 990000
+aboutme: "I have been writing production software in a variety of languages for over 3+ years for California Correctional Health Care Services. I have a deep driven passion for software, automation, and data science. This very CV was even compiled with code."
+docname: CV
+output: vitae::awesomecv
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      warning = FALSE,
+                      message = FALSE)
+
+require(xfun)
+
+packages <- c('vitae'     # The CV's LaTeX Template
+             ,'tibble'    # Data structure for tribbles
+             ,'magrittr'  # The Pipe %>%
+             ,'here'      # Relative File Paths
+             ,'readr'     # Data Loading
+             ,'glue'      # String Manipulation
+            )
+
+xfun::pkg_attach2(packages, message = FALSE)
+
+source(file = here("r","data.r"))
+
+```
+
+# Employment
+
+```{r EMPLOYMENT}
+
+work %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    why = detail,
+    when = glue::glue("{startMonth} {startYear} --> {endMonth} {endYear}",.na = ""),
+    where = where
+  )
+
+```
+
+# Education
+
+```{r EDUCATION}
+
+edu %>%
+  detailed_entries(
+    with = inst,
+    what = degree,
+    why = detail,
+    when = glue::glue("{startYear} --> {endYear}",.na = ""),
+    where = where
+  )
+
+```
+
+\pagebreak
+
+# Skills
+
+```{r SKILLS}
+
+skills %>%
+  detailed_entries(
+    with = area,
+    what = skills
+  )
+
+```
+
+# Honors
+
+```{r HONORS}
+
+honors %>%
+  detailed_entries(
+    with = area,
+    what = accomplishment,
+    why = detail,
+    when = year,
+    where = where
+  )
+
+```
+
+# Projects
+
+```{r PROJECTS}
+
+projects %>%
+  detailed_entries(
+    with = area,
+    what = accomplishment,
+    why = detail,
+    when = year,
+    where = where
+  )
+
+```
+
+# Works
+
+```{r WORKS}
+
+works %>%
+  detailed_entries(
+    with = area,
+    what = accomplishment,
+    why = detail,
+    when = year,
+    where = where
+  )
+
+```
+
+\pagebreak
+
+# Certifications
+
+```{r CERTIFICATIONS}
+
+certifications %>%
+  detailed_entries(
+    with = area,
+    what = accomplishment,
+    why = detail,
+    when = year,
+    where = where
+  )
+
+```
