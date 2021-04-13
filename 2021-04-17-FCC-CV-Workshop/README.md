@@ -7,14 +7,8 @@
 
 ```r
 install.packages('xfun')
-xfun::pkg_attach2(c('vitae'
-                    ,'here'
-                    ,'tinytex'
-                    ,'tibble'
-                    ,'glue'
-                    ,'rmarkdown'
-                    ,'dpylr'
-                    ,'yaml'))
+pkgs <- c('vitae' ,'here' ,'tinytex' ,'tibble' ,'glue' ,'rmarkdown' ,'dpylr' ,'yaml')
+xfun::pkg_attach2(pkgs)
 ```
 
 - The template repository [HERE](https://github.com/BryanJenksCommunity/Talks)
