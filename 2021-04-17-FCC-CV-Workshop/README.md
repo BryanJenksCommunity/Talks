@@ -7,7 +7,7 @@
 
 ```r
 install.packages('xfun')
-pkgs <- c('vitae' ,'here' ,'tinytex' ,'tibble' ,'glue' ,'rmarkdown' ,'dpylr', 'readr' ,'yaml')
+pkgs <- c('vitae' ,'here' ,'tinytex' ,'tibble' ,'glue' ,'rmarkdown' ,'dplyr', 'readr' ,'yaml')
 xfun::pkg_attach2(pkgs)
 ```
 
