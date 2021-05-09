@@ -1,6 +1,6 @@
-# Free Code Camp -- Git: 0 to Production
+# Free Code Camp -- Git: 0 To Production
 
-## What is Git?
+## What Is Git?
 
 ---
 
@@ -9,7 +9,7 @@
 
 ---
 
-## Where did Git come from?
+## Where Did Git Come From?
 
 ---
 
@@ -19,7 +19,7 @@ Linus Torvalds, Creator of the Linux kernel.
 
 ---
 
-## Why is Git useful?
+## Why Is Git Useful?
 
 ### In General
 
@@ -42,7 +42,7 @@ Linus Torvalds, Creator of the Linux kernel.
 
 ---
 
-## Differences Between Git For Personal Projects and Git For Production
+## Differences Between Git For Personal Projects & Git For Production
 
 ---
 
@@ -156,6 +156,48 @@ We first move the code to staging areas for information and formal release. Merg
 
 ---
 
+## Making It Easier
+
+---
+
+Now they you've used Git on the command line and worked through the whole process, you might still not be really pleased with the experience. Understandable, the command line is not for everyone. There are a few Git tools that i've used in production that i think are incredibly helpful and greatly simplify the experience.
+
+- GitLens: `eamodio.gitlens`
+- Git Graph: `mhutchie.git-graph`
+- Git History: `donjayamanne.githistory`
+- Git Tags: `howardzuo.vscode-git-tags`
+
+---
+
+## BONUS: Stashing
+
+---
+
+Stashing is incredibly handy when you made changes to some files on the wrong branch and you want to pick up all those changes and just dump them onto the correct branch with minimal effort.
+
+---
+
+1. On your current branch run `git stash push -u`
+2. see your current stashed changes `git stash list`
+3. switch to desired branch `git switch <BRANCH-NAME>`
+4. apply the stashed changes to current branch `git stash pop`
+
+---
+
+Easy way to quickly transfer some changes around branches when you forgot to switch to the right one.
+
+---
+
+## More Advanced Topics Not Covered
+
+---
+
+- interactive rebasing
+- Cherry picking
+- Git BARE repo's with work trees
+
+---
+
 ## Resources
 
 ### Documentation, Tutorials, Information
@@ -169,12 +211,3 @@ We first move the code to staging areas for information and formal release. Merg
 - <https://learngitbranching.js.org/>
 
 ---
-
-### VSCode Extensions
-
----
-
-- GitLens: `eamodio.gitlens`
-- Git Graph: `mhutchie.git-graph`
-- Git History: `donjayamanne.githistory`
-- Git Tags: `howardzuo.vscode-git-tags`
