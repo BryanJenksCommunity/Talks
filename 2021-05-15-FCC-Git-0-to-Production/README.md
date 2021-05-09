@@ -27,6 +27,7 @@ Linus Torvalds, Creator of the Linux kernel.
 
 - Distributed collaborative work
 - fast, efficient, small snapshots
+- CLI tools are hyper efficient
 
 ---
 
