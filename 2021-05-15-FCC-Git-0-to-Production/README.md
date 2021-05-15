@@ -1,6 +1,45 @@
 # Free Code Camp -- Git: 0 To Production
 
-## What Is Git?
+<div align="center">
+   <div style="float: left; margin-right: 10px; padding-left: 20%;">
+      <img height="200px" width="200px"src="img/fcc.jpeg"/>
+   </div>
+   <div style="float: left;">
+      <img height="200px" width="200px"src="img/git.png"/>
+   </div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+## What To Expect From This Talk
+
+---
+
+1. Learn about some basic git commands
+2. helpful git paradigms (Branching)
+3. Git workflows for both personal and collaborative settings
+4. To get inspired to learn more about leveraging Version Control for your work
+
+All presented materials will be available at [[[This Link]]](https://github.com/BryanJenksCommunity/Talks/tree/main/2021-05-15-FCC-Git-0-to-Production)
+
+---
+
+## Who Am I?
+
+---
+
+- TallGuyJenks
+  - (DevOps) Information Technology Associate @ Covered California
+    - [CV](https://github.com/tallguyjenks/CV/blob/master/CV.pdf)
+  - [YouTuber](https://www.youtube.com/c/BryanJenksTech?sub_confirmation=1)
+    - [General Social Media Person](https://streamerlinks.com/tallguyjenks)
+
+---
+
+## Jumping Right In
+
+---
+
+### What Is Git?
 
 ---
 
@@ -9,7 +48,7 @@
 
 ---
 
-## Where Did Git Come From?
+### Where Did Git Come From?
 
 ---
 
@@ -19,31 +58,31 @@ Linus Torvalds, Creator of the Linux kernel.
 
 ---
 
-## Why Is Git Useful?
+### Why Is Git Useful?
 
-### In General
+#### In General
 
 ---
 
 - Distributed collaborative work
 - fast, efficient, small snapshots
-- CLI tools are hyper efficient
+- & CLI tools are hyper efficient
 
 ---
 
-### In Practice
+#### In Practice
 
 ---
 
 - Allows people to work independently of each other
 - No check in/check out system where you have to wait on each other to work on code
-- Complete history of the code (roll back)
+- Complete history of the code (Retention & roll back)
 - Branching is cheap
 - can be efficiently used on the CLI while also having a plethora of GUI based tools to simplify the process
 
 ---
 
-## Differences Between Git For Personal Projects & Git For Production
+### Differences Between Git For Personal Projects & Git For Production
 
 ---
 
@@ -69,26 +108,40 @@ Lets work through that.
    3. MacOS: Terminal, iTerm2, etc
 3. Navigate to where you want your repo placed using the CLI commands:
    1. `cd`, `pwd`, `ls`
-4. Pull the repo down to your machine: `git clone <URL>`
-5. Check what the status is: `git status`
-6. check what branch you're on: `git branch`
-7. Now we're ready to get started!
+4. Pull the repo down to your machine: 
+   1. `git clone <URL>`
+   2. `git status`
+   3. `git branch`
+5. Now we're ready to get started!
    1. from here on we can use VSCode to open the repo directory or continue with Vim in the CLI
-8. Make a document `README.md`
-9. Add some content to it then save it
-10. check the repo status `git status`
-11. Changes have been made from the snapshot we want to publish those to production. How?
+6. Make a document `README.md`
+7. Add some content to it then save it
+8. check the repo status `git status`
+9. Changes have been made from the snapshot we want to publish those to production. How?
     1. `git add README.md`
     2. `git commit -m "< MY COMMIT MESSAGE>"`
     3. `git push`
     4. check remote (what does remote v.s. local mean?)
-12. You're done! thats basically the personal workflow.
+10. You're done! thats basically the personal workflow.
 
 ---
 
 Making changes, staging, committing, and pushing them to the remote.
 
 If we had a more robust personal workflow we could add branching into the mix. What is branching? Why is it useful? What does it mean in the context of my repo and my work?
+
+<div align="center">
+   <div style="float: left; margin-right: 10px;">
+      <img height="300px" width="300px"src="img/branch2.png"/>
+   </div>
+   <div style="float: left;">
+      <img height="300px" width="300px"src="img/branch.png"/>
+   </div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<!-- Source: https://www.nobledesktop.com/image/gitresources/git-branches-merge.png -->
+<!-- And: https://blog.seibert-media.net/wp-content/uploads/2015/07/Git-Branches-1.png -->
 
 ---
 
@@ -130,20 +183,26 @@ Honestly, much the same as the personal branch workflow. KISS method. Add a few 
 
 ---
 
+<img src="img/multi_branch_prod_workflow.png"><br>
+<!-- Source: https://i.stack.imgur.com/F00b8.png -->
+
+---
+
 1. `git branch dev`
 2. `git push origin dev`
 3. `git branch test`
 4. `git push origin test`
-5. `git branch feature`
+5. `git branch feature dev`
 6. `git switch feature`
-7. make a new doc, stage, commit, and `git push origin feature`
-8. on GitHub review the PR, if approved. Merge someones feature to the `dev` branch
+7. make a new doc, add, stage, commit
+8. `git push origin feature`
+9. on GitHub review the PR, if approved; Merge someones feature to the `dev` branch
    1. `git switch dev`
    2. `git merge feature`
-9. after further development and maybe unit test creation etc. merge to `test`
-   1. `git switch test`
-   2. `git merge dev`
-10. Nothing broke? the code is ready for production? then merge it into production!
+10. after further development and maybe unit test creation etc. merge to `test`
+    1. `git switch test`
+    2. `git merge dev`
+11. Nothing broke? the code is ready for production? then merge it into production!
     1. `git switch master`
     2. `git merge test`
 
@@ -157,7 +216,7 @@ We first move the code to staging areas for information and formal release. Merg
 
 ---
 
-## Making It Easier
+### Making It Easier
 
 ---
 
@@ -170,7 +229,7 @@ Now they you've used Git on the command line and worked through the whole proces
 
 ---
 
-## BONUS: Stashing
+### BONUS: Stashing
 
 ---
 
@@ -189,19 +248,21 @@ Easy way to quickly transfer some changes around branches when you forgot to swi
 
 ---
 
-## More Advanced Topics Not Covered
+### More Advanced Topics Not Covered
 
 ---
 
 - interactive rebasing
 - Cherry picking
 - Git BARE repo's with work trees
+- Git Aliases
+- Git Hooks
 
 ---
 
-## Resources
+### Resources
 
-### Documentation, Tutorials, Information
+#### Documentation, Tutorials, Information
 
 ---
 
@@ -210,5 +271,3 @@ Easy way to quickly transfer some changes around branches when you forgot to swi
 - <https://learnxinyminutes.com/docs/git/>
 - <https://ndpsoftware.com/git-cheatsheet.html>
 - <https://learngitbranching.js.org/>
-
----
