@@ -1,5 +1,7 @@
 # Free Code Camp -- Git: 0 To Production
 
+> The Talk Can Be Seen [[[HERE]]](https://youtu.be/NA4HAdBmfjE)
+
 <div align="center">
    <div style="float: left; margin-right: 10px; padding-left: 20%;">
       <img height="200px" width="200px"src="img/fcc.jpeg"/>
